@@ -49,6 +49,7 @@
   },
   "contact": {
     "title": "Contactez-nous",
+    "meta_description": "Contactez l'équipe Delish'Box pour toute question ou demande d'information",
     "name": "Nom",
     "email": "Email",
     "message": "Message",
@@ -57,9 +58,12 @@
     "success": "Votre message a été envoyé avec succès !",
     "error": "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.",
     "other_contact": "Autres moyens de nous contacter",
-    "email_address": "contact@delishbox.com",
+    "email_address": "contact@delishbox.fr",
     "phone": "+33 1 23 45 67 89",
-    "address": "Paris, France"
+    "address": "123 rue de la Gastronomie, 75001 Paris",
+    "consent_text": "J'accepte que mes données personnelles soient traitées pour le traitement de ma demande de contact",
+    "consent_required": "Veuillez accepter le traitement de vos données personnelles pour continuer",
+    "gdpr_notice": "Conformément au Règlement Général sur la Protection des Données (RGPD), les informations que vous nous communiquez sont destinées à traiter votre demande de contact. Elles sont conservées pendant la durée nécessaire au traitement de votre demande et ne sont pas transmises à des tiers. Vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, vous pouvez nous contacter à l'adresse email mentionnée ci-dessus."
   },
   "subscription": {
     "title": "Choisissez votre abonnement",

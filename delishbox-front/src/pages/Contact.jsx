@@ -7,12 +7,17 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    consent: false
   });
   const [status, setStatus] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.consent) {
+      setStatus('consent_required');
+      return;
+    }
     setStatus('sending');
 
     try {
@@ -27,7 +32,7 @@ const Contact = () => {
       }
 
       setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', message: '', consent: false });
     } catch (error) {
       setStatus('error');
       console.error('Erreur lors de l\'envoi du message:', error);
@@ -35,10 +40,10 @@ const Contact = () => {
   };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
@@ -107,6 +112,27 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
+                <div className="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    id="consent"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <label className="form-check-label" htmlFor="consent">
+                    {t('contact.consent_text')}
+                  </label>
+                </div>
+
+                {status === 'consent_required' && (
+                  <div className="alert alert-warning">
+                    {t('contact.consent_required')}
+                  </div>
+                )}
+
                 <button
                   type="submit"
                   className="btn btn-primary btn-lg w-100"
@@ -115,6 +141,12 @@ const Contact = () => {
                   {status === 'sending' ? t('contact.sending') : t('contact.send')}
                 </button>
               </form>
+
+              <div className="mt-4">
+                <p className="text-muted small">
+                  {t('contact.gdpr_notice')}
+                </p>
+              </div>
 
               <div className="mt-5">
                 <h2 className="h4 mb-3">{t('contact.other_contact')}</h2>
