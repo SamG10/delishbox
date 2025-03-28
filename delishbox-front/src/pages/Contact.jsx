@@ -14,6 +14,13 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    window.dataLayer.push({
+      event: 'contact_form_submit',
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      consent: formData.consent,
+    })
     if (!formData.consent) {
       setStatus('consent_required');
       return;
