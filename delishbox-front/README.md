@@ -2,7 +2,9 @@
 
 Application frontend React pour Delish'Box, une startup qui propose des kits de recettes par abonnement.
 
-## 🚀 Technologies utilisées
+## 🚀 Stack Technique
+
+### Technologies principales
 
 - React.js (Create React App)
 - JavaScript
@@ -11,12 +13,14 @@ Application frontend React pour Delish'Box, une startup qui propose des kits de 
 - Google Tag Manager (GA4)
 - Cookiebot (RGPD)
 
-## 📋 Prérequis
+### Outils de développement
 
 - Node.js (v14 ou supérieur)
 - npm (v6 ou supérieur)
+- ESLint
+- Prettier
 
-## 🛠️ Installation
+## 📋 Installation
 
 1. Cloner le repository :
 
@@ -31,7 +35,7 @@ cd delishbox/delishbox-front
 npm install
 ```
 
-3. Créer un fichier `.env` à la racine du projet avec les variables d'environnement suivantes :
+3. Configurer les variables d'environnement :
 
 ```env
 VITE_GTM_ID=votre-id-gtm
@@ -40,27 +44,156 @@ VITE_COOKIEBOT_ID=votre-id-cookiebot
 VITE_API_URL=http://localhost:3000/api
 ```
 
-## 🚀 Démarrage
+## 🗺️ Plan du Site
 
-Pour lancer l'application en mode développement :
+### Pages principales
+
+- `/` → Page d'accueil
+
+  - Hero section avec CTA principal
+  - Présentation des kits populaires
+  - Témoignages clients
+  - FAQ
+
+- `/kits` → Catalogue des kits
+
+  - Filtres par catégorie
+  - Système de recherche
+  - Tri par popularité/prix
+
+- `/kit/:slug` → Détail d'un kit
+
+  - Description détaillée
+  - Liste des ingrédients
+  - Instructions de préparation
+  - Avis clients
+
+- `/abonnement` → Offres d'abonnement
+
+  - Différents forfaits
+  - Comparateur de prix
+  - FAQ spécifique
+
+- `/contact` → Formulaire de contact
+
+  - Formulaire de contact
+  - Informations de contact
+  - FAQ
+
+- `/blog` → Blog culinaire
+
+  - Liste des articles
+  - Catégories
+  - Recherche
+
+- `/blog/:slug` → Page article
+  - Contenu de l'article
+  - Articles similaires
+  - Partage social
+
+## 📊 Événements Suivis
+
+### Événements de conversion
+
+- `subscribe_plan` → Sélection d'un plan d'abonnement
+
+  ```javascript
+  {
+    event: 'subscribe_plan',
+    id: string,
+    name: string,
+    price: number,
+    description: string,
+    features: array
+  }
+  ```
+
+- `contact_form_submit` → Soumission du formulaire de contact
+  ```javascript
+  {
+    event: 'contact_form_submit',
+    name: string,
+    email: string,
+    message: string,
+    consent: boolean
+  }
+  ```
+
+### Événements d'engagement
+
+- `language_switch_to_fr` → Changement de langue vers le français
+- `language_switch_to_en` → Changement de langue vers l'anglais
+
+### Configuration Analytics
+
+- Google Tag Manager
+- Google Analytics 4
+- Cookiebot
+
+## 🔒 Conformité RGPD
+
+### Gestion des cookies
+
+- Utilisation de Cookiebot pour la gestion des consentements
+- Catégories de cookies :
+  - Nécessaires (toujours actifs)
+  - Préférences
+  - Statistiques
+  - Marketing
+
+### Collecte de données
+
+- Données collectées :
+  - Informations de contact (formulaires)
+  - Données de navigation (avec consentement)
+  - Préférences utilisateur
+
+### Droits des utilisateurs
+
+- Droit d'accès aux données
+- Droit de rectification
+- Droit à l'effacement
+- Droit d'opposition
+- Droit à la portabilité
+
+## 💡 Retour d'Expérience
+
+### Points forts
+
+- Interface intuitive et responsive
+- Performance optimisée
+- Support multilingue
+- Analytics avancés
+- Conformité RGPD
+
+### Améliorations futures
+
+- PWA (Progressive Web App)
+- Optimisation des performances
+- Enrichissement des analytics
+- Nouvelles fonctionnalités de personnalisation
+
+## 🛠️ Démarrage
+
+### Mode développement
 
 ```bash
 npm run dev
 ```
 
-Pour construire l'application pour la production :
+### Build production
 
 ```bash
 npm run build
 ```
 
-Pour prévisualiser la version de production :
+### Prévisualisation production
 
 ```bash
 npm run preview
 ```
 
-## 📁 Structure du projet
+## 📁 Structure du Projet
 
 ```
 delishbox-front/
@@ -81,50 +214,11 @@ delishbox-front/
 └── package.json
 ```
 
-## 🌍 Internationalisation
-
-L'application est disponible en français et en anglais. Les traductions sont gérées via `react-i18next` et se trouvent dans le fichier `src/i18n.js`.
-
-## 📈 Analytics
-
-L'application utilise Google Tag Manager pour le tracking avec GA4. Les événements suivants sont trackés :
-
-- `click_subscribe_cta`
-- `scroll_kit_50`
-- `blog_article_view`
-- `click_add_to_cart`
-- `form_submit_contact`
-- `time_on_blog_30s`
-- `language_switch_to_fr` / `language_switch_to_en`
-
-## 🔒 RGPD
-
-L'application utilise Cookiebot pour la gestion des cookies et le respect du RGPD. Aucun tracking n'est effectué sans le consentement de l'utilisateur.
-
-## 🎨 UI/UX
-
-L'interface utilisateur est construite avec Bootstrap 5 et inclut :
-
-- Design responsive
-- Animations fluides
-- Support du mode sombre
-- Accessibilité (ARIA, contraste, navigation au clavier)
-
-## 📱 Pages
-
-- `/` → Accueil avec Hero section et CTA
-- `/kits` → Liste des kits
-- `/kit/:slug` → Détail d'un kit
-- `/abonnement` → Offres d'abonnement
-- `/contact` → Formulaire de contact
-- `/blog` → Liste des articles
-- `/blog/:slug` → Page article
-
 ## 🤝 Contribution
 
 1. Fork le projet
-2. Créer une branche pour votre fonctionnalité (`git checkout -b feature/AmazingFeature`)
-3. Commit vos changements (`git commit -m 'Add some AmazingFeature'`)
+2. Créer une branche (`git checkout -b feature/AmazingFeature`)
+3. Commit les changements (`git commit -m 'Add some AmazingFeature'`)
 4. Push vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrir une Pull Request
 
