@@ -22,6 +22,9 @@ export class Kit {
   @Column({ type: 'text' })
   ingredients: string;
 
+  @Column({ nullable: true })
+  imageUrl: string;
+
   @Column({ type: 'real' })
   price: number;
 
