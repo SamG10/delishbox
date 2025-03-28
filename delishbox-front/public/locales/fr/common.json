@@ -1,0 +1,123 @@
+{
+  "locale": "fr",
+  "nav": {
+    "home": "Accueil",
+    "kits": "Nos Kits",
+    "subscription": "Abonnement",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "footer": {
+    "home": "Accueil",
+    "kits": "Nos Kits",
+    "subscription": "Abonnement",
+    "blog": "Blog",
+    "contact": "Contact",
+    "description": "Recevez vos kits de recettes directement chez vous, à l'heure qui vous convient.",
+    "links": "Liens rapides",
+    "address": "Adresse: Paris, France",
+    "rights": "Tous droits réservés.",
+    "mentions": "Mentions légales",
+    "privacy": "Politique de confidentialité"
+  },
+  "home": {
+    "helmet": {
+      "title": "Delish'Box - Des kits de recettes délicieuses livrés chez vous",
+      "description": "Découvrez nos kits de recettes faciles et délicieuses. Livraison à domicile, ingrédients frais et instructions détaillées."
+    },
+    "hero": {
+      "title": "Découvrez nos kits de recettes",
+      "subtitle": "Des recettes faciles et délicieuses livrées chez vous"
+    },
+    "cta": {
+      "subscribe": "Je m'abonne"
+    },
+    "features": {
+      "delivery": {
+        "title": "Livraison à domicile",
+        "description": "Recevez vos kits de recettes directement chez vous, à l'heure qui vous convient."
+      },
+      "ingredients": {
+        "title": "Ingrédients frais",
+        "description": "Des ingrédients de qualité, soigneusement sélectionnés pour vos recettes."
+      },
+      "instructions": {
+        "title": "Instructions détaillées",
+        "description": "Des recettes faciles à suivre avec des instructions pas à pas."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "success": "Votre message a été envoyé avec succès !",
+    "error": "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer.",
+    "other_contact": "Autres moyens de nous contacter",
+    "email_address": "contact@delishbox.com",
+    "phone": "+33 1 23 45 67 89",
+    "address": "Paris, France"
+  },
+  "subscription": {
+    "title": "Choisissez votre abonnement",
+    "monthly": "Mensuel",
+    "quarterly": "Trimestriel",
+    "yearly": "Annuel",
+    "monthly_description": "1 kit par mois",
+    "quarterly_description": "3 kits par trimestre",
+    "yearly_description": "12 kits par an",
+    "features": {
+      "free_delivery": "Livraison gratuite",
+      "fresh_ingredients": "Ingrédients frais",
+      "detailed_instructions": "Instructions détaillées",
+      "online_recipes": "Accès aux recettes en ligne",
+      "discount_10": "10% de réduction",
+      "discount_20": "20% de réduction",
+      "free_kits_2": "2 kits gratuits"
+    },
+    "select": "Sélectionner",
+    "personal_info": "Informations personnelles",
+    "full_name": "Nom complet",
+    "address": "Adresse",
+    "city": "Ville",
+    "postal_code": "Code postal",
+    "country": "Pays",
+    "payment_method": "Mode de paiement",
+    "card": "Carte bancaire",
+    "sepa": "Prélèvement SEPA",
+    "subscribe": "S'abonner",
+    "gdpr": {
+      "terms": "J'accepte les conditions générales d'utilisation",
+      "privacy": "J'accepte la politique de confidentialité",
+      "marketing": "J'accepte de recevoir des communications marketing"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "loading": "Chargement...",
+    "error": "Erreur lors du chargement des articles",
+    "readMore": "Lire la suite",
+    "meta_description": "Découvrez nos articles sur la cuisine, les recettes et les astuces culinaires."
+  },
+  "blog_post": {
+    "loading": "Chargement...",
+    "error": "Erreur lors du chargement de l'article",
+    "not_found": "Article non trouvé",
+    "share": "Partager cet article",
+    "share_on": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "kits": {
+    "title": "Nos Kits de Recettes",
+    "loading": "Chargement...",
+    "error": "Erreur lors du chargement des kits",
+    "viewDetails": "Voir les détails",
+    "meta_description": "Découvrez notre sélection de kits de recettes. Des ingrédients frais et des instructions détaillées pour des repas délicieux."
+  }
+}

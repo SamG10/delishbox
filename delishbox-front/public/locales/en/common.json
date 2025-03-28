@@ -1,0 +1,123 @@
+{
+  "locale": "en",
+  "nav": {
+    "home": "Home",
+    "kits": "Our Kits",
+    "subscription": "Subscription",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "footer": {
+    "home": "Home",
+    "kits": "Our Kits",
+    "subscription": "Subscription",
+    "blog": "Blog",
+    "contact": "Contact",
+    "description": "Receive your recipe kits directly at home, at a time that suits you.",
+    "links": "Quick Links",
+    "address": "Address: Paris, France",
+    "rights": "All rights reserved.",
+    "mentions": "Legal Notice",
+    "privacy": "Privacy Policy"
+  },
+  "home": {
+    "helmet": {
+      "title": "Delish'Box - Delicious Recipe Kits Delivered to Your Door",
+      "description": "Discover our easy and delicious recipe kits. Home delivery, fresh ingredients, and detailed instructions."
+    },
+    "hero": {
+      "title": "Discover Our Recipe Kits",
+      "subtitle": "Easy and delicious recipes delivered to your home"
+    },
+    "cta": {
+      "subscribe": "Subscribe"
+    },
+    "features": {
+      "delivery": {
+        "title": "Home Delivery",
+        "description": "Receive your recipe kits directly at home, at a time that suits you."
+      },
+      "ingredients": {
+        "title": "Fresh Ingredients",
+        "description": "Quality ingredients, carefully selected for your recipes."
+      },
+      "instructions": {
+        "title": "Detailed Instructions",
+        "description": "Easy-to-follow recipes with step-by-step instructions."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Your message has been sent successfully!",
+    "error": "An error occurred while sending the message. Please try again.",
+    "other_contact": "Other ways to contact us",
+    "email_address": "contact@delishbox.com",
+    "phone": "+33 1 23 45 67 89",
+    "address": "Paris, France"
+  },
+  "subscription": {
+    "title": "Choose your subscription",
+    "monthly": "Monthly",
+    "quarterly": "Quarterly",
+    "yearly": "Yearly",
+    "monthly_description": "1 kit per month",
+    "quarterly_description": "3 kits per quarter",
+    "yearly_description": "12 kits per year",
+    "features": {
+      "free_delivery": "Free delivery",
+      "fresh_ingredients": "Fresh ingredients",
+      "detailed_instructions": "Detailed instructions",
+      "online_recipes": "Access to online recipes",
+      "discount_10": "10% discount",
+      "discount_20": "20% discount",
+      "free_kits_2": "2 free kits"
+    },
+    "select": "Select",
+    "personal_info": "Personal Information",
+    "full_name": "Full name",
+    "address": "Address",
+    "city": "City",
+    "postal_code": "Postal code",
+    "country": "Country",
+    "payment_method": "Payment method",
+    "card": "Credit card",
+    "sepa": "SEPA direct debit",
+    "subscribe": "Subscribe",
+    "gdpr": {
+      "terms": "I accept the terms and conditions",
+      "privacy": "I accept the privacy policy",
+      "marketing": "I accept to receive marketing communications"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "loading": "Loading...",
+    "error": "Error loading articles",
+    "readMore": "Read more",
+    "meta_description": "Discover our articles about cooking, recipes, and culinary tips."
+  },
+  "blog_post": {
+    "loading": "Loading...",
+    "error": "Error loading article",
+    "not_found": "Article not found",
+    "share": "Share this article",
+    "share_on": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "kits": {
+    "title": "Our Recipe Kits",
+    "loading": "Loading...",
+    "error": "Error loading kits",
+    "viewDetails": "View details",
+    "meta_description": "Discover our selection of recipe kits. Fresh ingredients and detailed instructions for delicious meals."
+  }
+}
