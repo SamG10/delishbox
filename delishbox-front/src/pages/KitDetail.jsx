@@ -26,17 +26,6 @@ const KitDetail = () => {
     fetchKit();
   }, [slug]);
 
-  console.log(kit)
-
-  const handleAddToCart = () => {
-    if (window.gtag) {
-      window.gtag('event', 'click_add_to_cart', {
-        'event_category': 'Kit',
-        'event_label': kit.name
-      });
-    }
-  };
-
   if (loading) return <div className="loading">Chargement...</div>;
   if (error) return <div className="error-message">{error}</div>;
   if (!kit) return <div className="error-message">Kit non trouvé</div>;
@@ -80,7 +69,6 @@ const KitDetail = () => {
                 <span className="h3 mb-0">{kit.price}€</span>
                 <button
                   className="btn btn-primary btn-lg"
-                  onClick={handleAddToCart}
                 >
                   Ajouter au panier
                 </button>

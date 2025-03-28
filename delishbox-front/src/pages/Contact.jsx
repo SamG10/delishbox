@@ -24,13 +24,6 @@ const Contact = () => {
       // Simuler l'envoi du formulaire
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-      if (window.gtag) {
-        window.gtag('event', 'form_submit_contact', {
-          'event_category': 'Contact',
-          'event_label': 'Contact form submission'
-        });
-      }
-
       setStatus('success');
       setFormData({ name: '', email: '', message: '', consent: false });
     } catch (error) {

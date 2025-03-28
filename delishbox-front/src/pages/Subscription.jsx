@@ -65,12 +65,6 @@ const Subscription = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (window.gtag) {
-      window.gtag('event', 'form_submit_contact', {
-        'event_category': 'Subscription',
-        'event_label': selectedPlan
-      });
-    }
     // Logique de soumission du formulaire à implémenter
   };
 

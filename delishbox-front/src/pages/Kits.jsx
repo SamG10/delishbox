@@ -26,17 +26,6 @@ const Kits = () => {
     fetchKits();
   }, [t]);
 
-  console.log(kits)
-
-  const handleKitScroll = (kitId) => {
-    if (window.gtag) {
-      window.gtag('event', 'scroll_kit_50', {
-        'event_category': 'Kits',
-        'event_label': `Kit ${kitId}`
-      });
-    }
-  };
-
   if (loading) return <div className="loading">{t('kits.loading')}</div>;
   if (error) return <div className="error-message">{error}</div>;
 
@@ -54,7 +43,7 @@ const Kits = () => {
           <div className="row g-4">
             {kits.map((kit) => (
               <div key={kit.id} className="col-md-4">
-                <div className="card h-100" onMouseEnter={() => handleKitScroll(kit.id)}>
+                <div className="card h-100">
                   <img
                     src={kit.imageUrl}
                     className="card-img-top"
