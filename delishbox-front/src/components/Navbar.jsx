@@ -8,6 +8,9 @@ const Navbar = () => {
   const location = useLocation();
 
   const changeLanguage = (lng) => {
+    window.dataLayer.push({
+      event: `language_switch_to_${lng}`,
+    })
     i18n.changeLanguage(lng);
   };
 
