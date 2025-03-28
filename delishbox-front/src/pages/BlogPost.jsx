@@ -16,24 +16,6 @@ const BlogPost = () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/blog/${slug}`);
         setPost(response.data);
-
-        // Track blog article view
-        if (window.gtag) {
-          window.gtag('event', 'blog_article_view', {
-            'event_category': 'Blog',
-            'event_label': response.data.title
-          });
-        }
-
-        // Track time on blog after 30 seconds
-        setTimeout(() => {
-          if (window.gtag) {
-            window.gtag('event', 'time_on_blog_30s', {
-              'event_category': 'Blog',
-              'event_label': response.data.title
-            });
-          }
-        }, 30000);
       } catch (err) {
         setError(t('blog_post.error'));
         console.error('Erreur:', err);
@@ -53,10 +35,10 @@ const BlogPost = () => {
     <>
       <Helmet>
         <title>{post.title} - {t('blog.title')} Delish'Box</title>
-        <meta name="description" content={post.excerpt} />
+        <meta name="description" content={post.description} />
         <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:image" content={post.image} />
+        <meta property="og:description" content={post.description} />
+        <meta property="og:image" content={post.imageUrl} />
       </Helmet>
 
       <article className="py-5">
@@ -66,18 +48,18 @@ const BlogPost = () => {
               <header className="mb-5">
                 <h1 className="display-4 mb-3">{post.title}</h1>
                 <div className="text-muted mb-4">
-                  {new Date(post.date).toLocaleDateString('fr-FR', {
+                  {new Date(post.createdAt).toLocaleDateString('fr-FR', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
                   })}
                 </div>
                 <img
-                  src={post.image}
+                  src={post.imageUrl}
                   alt={post.title}
                   className="img-fluid rounded shadow mb-4"
                 />
-                <p className="lead">{post.excerpt}</p>
+                <p className="lead">{post.description}</p>
               </header>
 
               <div className="content" dangerouslySetInnerHTML={{ __html: post.content }} />

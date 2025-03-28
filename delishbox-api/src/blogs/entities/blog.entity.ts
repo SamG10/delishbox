@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
 import slugify from 'slugify';
 import {
   BeforeInsert,
@@ -38,13 +38,11 @@ export class Blog {
   @IsEnum(Language)
   language: Language;
 
+  @Column({ nullable: true })
+  imageUrl: string;
+
   @CreateDateColumn()
   createdAt: Date;
-
-  @Column({ nullable: true })
-  @IsString()
-  @IsOptional()
-  metaDescription?: string;
 
   @BeforeInsert()
   generateSlug() {

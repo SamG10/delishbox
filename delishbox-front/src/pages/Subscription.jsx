@@ -82,8 +82,16 @@ const Subscription = () => {
     }));
   };
 
-  const handlePlanSelect = (planId) => {
-    setSelectedPlan(planId);
+  const handlePlanSelect = (plan) => {
+    window.dataLayer.push({
+      event: 'subscribe_plan',
+      id: plan.id,
+      name: plan.name,
+      price: plan.price,
+      description: plan.description,
+      features: plan.features,
+    })
+    setSelectedPlan(plan.id);
     setShowModal(true);
   };
 
@@ -135,7 +143,7 @@ const Subscription = () => {
                     </ul>
                     <button
                       className={`btn ${selectedPlan === plan.id ? 'btn-primary' : 'btn-outline-primary'}`}
-                      onClick={() => handlePlanSelect(plan.id)}
+                      onClick={() => handlePlanSelect(plan)}
                     >
                       {t('subscription.select')}
                     </button>

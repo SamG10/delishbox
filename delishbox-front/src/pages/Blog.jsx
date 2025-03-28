@@ -45,7 +45,7 @@ const Blog = () => {
               <div key={post.id} className="col-md-4">
                 <div className="card h-100">
                   <img
-                    src={post.image}
+                    src={post.imageUrl}
                     className="card-img-top"
                     alt={post.title}
                     style={{ height: '200px', objectFit: 'cover' }}
@@ -53,13 +53,13 @@ const Blog = () => {
                   <div className="card-body">
                     <h2 className="card-title h5">{post.title}</h2>
                     <p className="card-text text-muted">
-                      {new Date(post.date).toLocaleDateString('fr-FR', {
+                      {new Date(post.createdAt).toLocaleDateString('fr-FR', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
                       })}
                     </p>
-                    <p className="card-text">{post.excerpt}</p>
+                    <p className="card-text">{post.description}</p>
                     <Link
                       to={`/blog/${post.slug}`}
                       className="btn btn-outline-primary"

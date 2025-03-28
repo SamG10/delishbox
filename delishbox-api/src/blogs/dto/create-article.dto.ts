@@ -17,7 +17,7 @@ export class CreateArticleDto {
   @IsEnum(Language)
   language: Language;
 
-  @IsString()
   @IsOptional()
-  metaDescription?: string;
+  @IsString()
+  imageUrl: string;
 }
